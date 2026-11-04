@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La oferta sin regalar margen — Juanfe León</title>
+<meta name="description" content="Descuento, regalo, envío gratis o segunda unidad: cuál te cuesta menos por cada peso de ahorro que siente el cliente. Y hasta dónde podés descontar antes de quedar en cero.">
+<meta property="og:title" content="La oferta sin regalar margen">
+<meta property="og:description" content="Cuál promoción te cuesta menos por cada peso que siente el cliente.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --paper:#f6f6f4; --raised:#ffffff; --ink:#0e0e10; --muted:#5b5b63;
+  --line:#d9d9de; --accent:#1f3dff; --on-accent:#fff;
+  --marker:#ffe033; --on-marker:#0e0e10; --signal:#d12e14; --band:#ecebe7; --ok:#1a7f37;
+  --display:"Archivo","Arial Black",system-ui,sans-serif;
+  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#0e0e10; --raised:#1a1a1e; --ink:#f6f6f4; --muted:#a2a2aa;
+  --line:#2e2e34; --accent:#7a8cff; --on-accent:#0e0e10;
+  --signal:#ff6a4d; --band:#17171b; --ok:#5fc97a; color-scheme:dark;
+}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h1{font-size:clamp(33px,7.2vw,60px);font-weight:900;letter-spacing:-.045em;line-height:.94}
+h2{font-size:clamp(20px,3vw,27px);font-weight:900;letter-spacing:-.03em;line-height:1.05}
+h3{font-size:14px;font-weight:800}
+p{margin:0}
+.kicker{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.stack{display:flex;flex-direction:column}
+.g1{gap:8px}.g2{gap:16px}.g3{gap:26px}
+.muted{color:var(--muted)}
+header{background:var(--band);padding-block:clamp(36px,6vw,64px)}
+section{padding-block:clamp(32px,5vw,54px)}
+.lede{font-size:clamp(16px,2vw,19px);line-height:1.45;max-width:58ch}
+fieldset{border:1px solid var(--line);background:var(--raised);padding:16px;margin:0;min-width:0}
+legend{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);padding:0 6px;margin-left:-6px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px}
+.f{display:grid;grid-template-columns:1fr 120px;gap:8px 12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+fieldset .f:last-of-type{border-bottom:0;padding-bottom:0}
+.f label{font-size:13.5px;line-height:1.3;min-width:0}
+.f .hint{display:block;font-size:11.5px;color:var(--muted);line-height:1.3;margin-top:2px}
+input[type=number]{width:100%;font-family:var(--mono);font-size:13px;padding:7px 8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:0;text-align:right;font-variant-numeric:tabular-nums}
+input:focus-visible,button:focus-visible,input[type=checkbox]:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.chk{display:flex;gap:11px;align-items:flex-start;padding-top:10px;border-top:1px solid var(--line);margin-top:4px}
+.chk input{width:21px;height:21px;accent-color:var(--accent);margin:0;flex:none}
+.chk span{font-size:13px;line-height:1.35}
+.btn{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--muted);padding:8px 13px;cursor:pointer;align-self:flex-start}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.verd{border-left:3px solid var(--accent);padding-left:15px}
+.verd.bad{border-left-color:var(--signal)}
+.verd p{font-size:14.5px;line-height:1.5}
+footer{border-top:1px solid var(--line);padding-block:26px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);line-height:1.8}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:14px}
+.card{border:1px solid var(--line);background:var(--raised);display:flex;flex-direction:column;min-width:0}
+.card.mejor{border-color:var(--accent);border-width:2px}
+.card .ch{padding:13px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:9px}
+.card.mejor .ch{background:var(--accent)}
+.card.mejor .ch h3,.card.mejor .ch .rank{color:var(--on-accent)}
+.card .ch h3{font-family:var(--display);font-size:15px;font-weight:900;letter-spacing:-.02em}
+.card .ch .rank{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.card .cb{padding:14px 15px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card .ef{font-family:var(--display);font-size:38px;font-weight:900;letter-spacing:-.045em;line-height:.9;color:var(--accent);font-variant-numeric:tabular-nums}
+.card.mala .ef{color:var(--signal)}
+.card .efl{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);line-height:1.3;margin-top:-5px}
+.card .lin{display:flex;justify-content:space-between;gap:9px;font-size:12.5px;border-top:1px solid var(--line);padding-top:7px}
+.card .lin span:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.card .lin.dest span{font-weight:600}
+.card .nota{font-size:12px;color:var(--muted);line-height:1.4;margin-top:auto;padding-top:4px}
+.slider{border:1px solid var(--line);background:var(--raised);padding:20px}
+.slider input[type=range]{width:100%;accent-color:var(--accent);margin:14px 0 4px}
+.slider .fila{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px;margin-top:14px}
+.slider .v{font-family:var(--display);font-size:27px;font-weight:900;letter-spacing:-.04em;line-height:1;display:block;font-variant-numeric:tabular-nums}
+.slider .v.mal{color:var(--signal)}
+.slider .l{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);display:block;margin-top:6px;line-height:1.3}
+.slider .cab{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.slider .pct{font-family:var(--display);font-size:clamp(34px,7vw,52px);font-weight:900;letter-spacing:-.05em;line-height:1;color:var(--accent)}
+.slider .pct.mal{color:var(--signal)}
+.topes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.topes>div{background:var(--raised);padding:15px;min-width:0}
+.topes .v{font-family:var(--display);font-size:29px;font-weight:900;letter-spacing:-.04em;line-height:1;display:block}
+.topes .l{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);display:block;margin-top:6px;line-height:1.3}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap stack g2">
+    <p class="kicker">Recurso · @juanfleonleon</p>
+    <h1>La oferta sin<br>regalar margen</h1>
+    <p class="lede">Un descuento del 30% y un regalo que el cliente valora en lo mismo no te cuestan igual: uno sale de tu precio y el otro de tu costo. Acá se ve cuánto te cuesta de verdad cada forma de promoción por cada peso de ahorro que siente el cliente.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap stack g3">
+    <div class="grid2">
+      <fieldset>
+        <legend>Tu producto</legend>
+        <div class="f"><label for="ticket">Precio de venta</label><input type="number" id="ticket" value="160000" min="1" step="1000"></div>
+        <div class="f"><label for="costo">Lo que te cuesta a vos</label><input type="number" id="costo" value="65000" min="0" step="1000"></div>
+        <div class="f"><label for="fleteAsum">Flete que ya asumís por pedido</label><input type="number" id="fleteAsum" value="5000" min="0" step="500"></div>
+        <div class="f"><label for="pisoMargen">Margen mínimo que aceptás (%)<small class="hint">Sobre el precio de venta</small></label><input type="number" id="pisoMargen" value="35" min="0" max="90" step="1"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Las cuatro promociones</legend>
+        <div class="f"><label for="pctDesc">Descuento directo (%)</label><input type="number" id="pctDesc" value="30" min="0" max="90" step="1"></div>
+        <div class="f"><label for="regaloPrecio">Regalo: precio al público</label><input type="number" id="regaloPrecio" value="48000" min="0" step="1000"></div>
+        <div class="f"><label for="regaloCosto">Regalo: lo que te cuesta</label><input type="number" id="regaloCosto" value="19000" min="0" step="1000"></div>
+        <div class="f"><label for="fleteCobra">Envío que le cobrás hoy al cliente</label><input type="number" id="fleteCobra" value="15000" min="0" step="500"></div>
+        <div class="f"><label for="pctSegunda">Segunda unidad con (%) de descuento</label><input type="number" id="pctSegunda" value="50" min="0" max="100" step="5"></div>
+      </fieldset>
+    </div>
+    <button class="btn" id="reset" type="button">Volver al ejemplo</button>
+  </div>
+</section>
+
+<section style="background:var(--band)">
+  <div class="wrap stack g3">
+    <div class="stack g1">
+      <p class="kicker">01 — Cuál te cuesta menos</p>
+      <h2>Por cada peso que te cuesta, el cliente siente…</h2>
+      <p class="lede muted">El número grande es la eficiencia: cuánto ahorro percibe el cliente por cada peso que sale de tu bolsillo. Por encima de 1 estás comprando percepción barata.</p>
+    </div>
+    <div class="cards" id="cards"></div>
+    <div class="verd" id="verd"><p>—</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack g3">
+    <div class="stack g1">
+      <p class="kicker">02 — El techo</p>
+      <h2>Hasta dónde podés descontar</h2>
+    </div>
+    <div class="slider">
+      <div class="cab"><span class="pct" id="sPct">30%</span><span class="muted" style="font-size:13.5px">Movelo para ver qué le pasa a tu margen</span></div>
+      <input type="range" id="rango" min="0" max="80" value="30" step="1" aria-label="Porcentaje de descuento">
+      <div class="fila">
+        <div><span class="v" id="sPrecio">—</span><span class="l">Precio con<br>descuento</span></div>
+        <div><span class="v" id="sMargen">—</span><span class="l">Lo que te queda<br>por pedido</span></div>
+        <div><span class="v" id="sPctM">—</span><span class="l">Margen sobre<br>la venta</span></div>
+        <div><span class="v" id="sBer">—</span><span class="l">Break-even ROAS<br>con ese precio</span></div>
+      </div>
+    </div>
+    <div class="topes">
+      <div><span class="v" id="tPiso">—</span><span class="l">Descuento máximo para<br>no bajar de tu margen mínimo</span></div>
+      <div><span class="v" id="tCero">—</span><span class="l">Descuento al que<br>dejás de ganar</span></div>
+    </div>
+    <div class="verd" id="verdTope"><p>—</p></div>
+  </div>
+</section>
+
+<section style="background:var(--band)">
+  <div class="wrap stack g2">
+    <h2>Tres cosas que no están en la cuenta</h2>
+    <p class="lede muted"><strong>El descuento se lleva margen de todos, no solo de los que lo necesitaban.</strong> Una parte de la gente que compró con 30% hubiera comprado sin nada. El regalo y el envío gratis se pueden condicionar a dos unidades o a un monto mínimo; el descuento en toda la tienda, no.</p>
+    <p class="lede muted"><strong>La claridad vende más que la eficiencia.</strong> El bundle suele ser lo más rentable por peso, pero "compra uno y llevá el segundo al 50%" se entiende peor en el primer segundo de un video que "30% en toda la tienda". Si la oferta no se entiende de una, no existe.</p>
+    <p class="lede muted"><strong>El descuento más caro es el que no necesitabas.</strong> Antes de definir el porcentaje, mirá <a href="https://juanfelareal.github.io/break-even-roas/">tu break-even</a>: si ya estás ajustado, cada punto de descuento sube el ROAS que necesitás para no perder.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Juanfe León · @juanfleonleon</p>
+    <p>Noviembre 2026</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ids=['ticket','costo','fleteAsum','pisoMargen','pctDesc','regaloPrecio','regaloCosto','fleteCobra','pctSegunda'];
+  var DEF={ticket:160000,costo:65000,fleteAsum:5000,pisoMargen:35,pctDesc:30,regaloPrecio:48000,regaloCosto:19000,fleteCobra:15000,pctSegunda:50};
+  var fmt=new Intl.NumberFormat('es-CO',{maximumFractionDigits:0});
+  var KEY='oferta-margen-v1';
+  function v(id){var n=parseFloat(document.getElementById(id).value);return isFinite(n)?n:0;}
+  function money(n){return (n<0?'−':'')+'$'+fmt.format(Math.abs(Math.round(n)));}
+
+  function render(){
+    var t=Math.max(v('ticket'),1), c=v('costo'), fa=v('fleteAsum');
+    var base=t-c-fa;
+
+    var d=v('pctDesc')/100;
+    var A={n:'Descuento directo',perc:t*d,costo:t*d,venta:t*(1-d),margen:base-t*d,
+      nota:'Sale directo del precio. Es el más caro por peso de percepción y el único que no podés condicionar.'};
+
+    var B={n:'Regalo con la compra',perc:v('regaloPrecio'),costo:v('regaloCosto'),venta:t,margen:base-v('regaloCosto'),
+      nota:'El cliente lo valora al precio de vitrina y a vos te cuesta el costo. Condicionalo a dos unidades y sube el ticket.'};
+
+    var C={n:'Envío gratis',perc:v('fleteCobra'),costo:v('fleteCobra'),venta:t,margen:base-v('fleteCobra'),
+      nota:'Eficiencia de uno a uno, pero quita la fricción donde más se cae el carrito. Poné un monto mínimo.'};
+
+    var s=v('pctSegunda')/100;
+    var ventaD=t+t*(1-s), costoD=c*2+fa;
+    var D={n:'Segunda unidad',perc:t*s,costo:c,venta:ventaD,margen:ventaD-costoD,
+      nota:'Casi siempre deja más plata en términos absolutos porque duplica el ticket, pero se entiende peor en el primer segundo.'};
+
+    var L=[A,B,C,D];
+    L.forEach(function(x){x.ef=x.costo>0?x.perc/x.costo:0;});
+    var orden=L.slice().sort(function(a,b){return b.ef-a.ef;});
+    var mejorMargen=L.slice().sort(function(a,b){return b.margen-a.margen;})[0];
+
+    var h='';
+    L.forEach(function(x){
+      var puesto=orden.indexOf(x)+1;
+      var cls='card'+(puesto===1?' mejor':'')+(x.ef<1?' mala':'');
+      h+='<div class="'+cls+'"><div class="ch"><h3>'+x.n+'</h3><span class="rank">'+puesto+'º en eficiencia</span></div>'
+        +'<div class="cb">'
+        +'<span class="ef">'+(x.ef>0?x.ef.toFixed(2):'—')+'</span>'
+        +'<span class="efl">pesos percibidos por cada peso que te cuesta</span>'
+        +'<span class="lin"><span>Ahorro que siente</span><span>'+money(x.perc)+'</span></span>'
+        +'<span class="lin"><span>Lo que te cuesta</span><span>'+money(x.costo)+'</span></span>'
+        +'<span class="lin"><span>Venta por transacción</span><span>'+money(x.venta)+'</span></span>'
+        +'<span class="lin dest"><span>Te queda</span><span>'+money(x.margen)+'</span></span>'
+        +'<span class="nota">'+x.nota+'</span></div></div>';
+    });
+    document.getElementById('cards').innerHTML=h;
+
+    var vd=document.getElementById('verd'), p=vd.querySelector('p');
+    if(base<=0){ vd.className='verd bad'; p.innerHTML='<strong>Sin promoción ya estás en cero.</strong> Con este precio y este costo no hay oferta posible: la cuenta hay que arreglarla en el producto, no en la campaña.'; }
+    else {
+      vd.className='verd';
+      p.innerHTML='<strong>'+orden[0].n+' es la más eficiente: '+orden[0].ef.toFixed(2)+' pesos de percepción por cada peso tuyo.</strong> '
+        +'El descuento directo te deja '+money(A.margen)+' y '+mejorMargen.n.toLowerCase()+' te deja '+money(mejorMargen.margen)+', una diferencia de '+money(mejorMargen.margen-A.margen)+' por transacción. '
+        +'Con mil pedidos en el mes, son '+money((mejorMargen.margen-A.margen)*1000)+'.';
+    }
+
+    // slider
+    var sd=parseFloat(document.getElementById('rango').value)/100;
+    var precioS=t*(1-sd), margenS=precioS-c-fa, pctM=precioS>0?margenS/precioS*100:0;
+    document.getElementById('sPct').textContent=(sd*100).toFixed(0)+'%';
+    document.getElementById('sPct').className='pct'+(margenS<=0?' mal':'');
+    document.getElementById('sPrecio').textContent=money(precioS);
+    document.getElementById('sMargen').textContent=money(margenS);
+    document.getElementById('sMargen').className='v'+(margenS<=0?' mal':'');
+    document.getElementById('sPctM').textContent=pctM.toFixed(1)+'%';
+    document.getElementById('sPctM').className='v'+(pctM<v('pisoMargen')?' mal':'');
+    var berS=margenS>0?(precioS/margenS):0;
+    document.getElementById('sBer').textContent=berS>0?berS.toFixed(2):'∞';
+    document.getElementById('sBer').className='v'+(berS<=0?' mal':'');
+
+    // topes
+    var piso=v('pisoMargen')/100;
+    // precio p tal que (p - c - fa)/p = piso  →  p = (c+fa)/(1-piso)
+    var pPiso=piso<1?((c+fa)/(1-piso)):Infinity;
+    var dPiso=t>0?Math.max(0,(1-pPiso/t)*100):0;
+    var pCero=c+fa;
+    var dCero=t>0?Math.max(0,(1-pCero/t)*100):0;
+    document.getElementById('tPiso').textContent=(isFinite(dPiso)?dPiso.toFixed(1):'0')+'%';
+    document.getElementById('tCero').textContent=dCero.toFixed(1)+'%';
+
+    var vt=document.getElementById('verdTope'), pt=vt.querySelector('p');
+    if(dPiso<=0){ vt.className='verd bad'; pt.innerHTML='<strong>No te da para descontar nada.</strong> A precio lleno ya estás por debajo del margen mínimo que pusiste. Cualquier promoción tiene que venir por el lado del regalo o del bundle, no del precio.'; }
+    else if(v('pctDesc')>dPiso){ vt.className='verd bad'; pt.innerHTML='<strong>El '+v('pctDesc')+'% que pusiste pasa tu techo.</strong> Podés descontar hasta '+dPiso.toFixed(1)+'% sin bajar de tu margen mínimo, y hasta '+dCero.toFixed(1)+'% antes de dejar de ganar. Arriba de '+dPiso.toFixed(1)+'% estás vendiendo volumen que no te paga.'; }
+    else { vt.className='verd'; pt.innerHTML='<strong>El '+v('pctDesc')+'% te cabe.</strong> Tu techo para no bajar del margen mínimo es '+dPiso.toFixed(1)+'%, y el punto donde dejás de ganar es '+dCero.toFixed(1)+'%. Guardá ese margen entre los dos para el SKU que te sobra en bodega.'; }
+
+    try{localStorage.setItem(KEY,JSON.stringify({ids:ids.map(v),slider:document.getElementById('rango').value}));}catch(e){}
+  }
+
+  ids.forEach(function(i){document.getElementById(i).addEventListener('input',render);});
+  document.getElementById('rango').addEventListener('input',render);
+  document.getElementById('pctDesc').addEventListener('input',function(){document.getElementById('rango').value=v('pctDesc');render();});
+  document.getElementById('reset').addEventListener('click',function(){
+    ids.forEach(function(i){document.getElementById(i).value=DEF[i];});
+    document.getElementById('rango').value=30;
+    try{localStorage.removeItem(KEY);}catch(e){} render();
+  });
+  try{
+    var s2=JSON.parse(localStorage.getItem(KEY)||'null');
+    if(s2&&Array.isArray(s2.ids)){ids.forEach(function(i,k){if(typeof s2.ids[k]==='number')document.getElementById(i).value=s2.ids[k];});
+      if(s2.slider)document.getElementById('rango').value=s2.slider;}
+  }catch(e){}
+  render();
+})();
+</script>
+</body>
+</html>
